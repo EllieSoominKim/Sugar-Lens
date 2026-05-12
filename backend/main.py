@@ -8,8 +8,8 @@ import base64
 
 initialize_app()
 
-# Gemini API 키 
 GEMINI_API_KEY = SecretParam("GEMINI_API_KEY")
+model = geminai.GenerativeModel('gemini-3.0-flash')
 
 
 # ----------음식 영양 정보 API----------
