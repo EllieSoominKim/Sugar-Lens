@@ -132,6 +132,7 @@ export default function App() {
     </SafeAreaView>
   );
 }
+```
 ---
 
 ##  기술 스택 (Tech Stack)
