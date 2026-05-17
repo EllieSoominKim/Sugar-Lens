@@ -1,20 +1,29 @@
-# Sugar_Lens
-AI Food Scan · Alternative Menu Recommendation · Exercise Conversion Service · AI Chatbot
+# 📱 [프로젝트 이름, 예: Sugar-Lens]
 > **AI 기반 음식 인식 데이터 매핑 및 혈당 관리 풀스택 모바일 서비스 (Architecture Archive)**
 
-**프로젝트 검토 안내**
+⚠️ **프로젝트 검토 안내**
 본 프로젝트는 현재 Cloud 인프라 비용 및 관리 이슈로 인해 Firebase 백엔드 서버가 종료(Deprecate)되었습니다. 따라서 로컬 환경에서의 실시간 API 통신 및 앱 구동은 제한됩니다. 
-대신, 프로젝트의 기획 배경, 상세 구동 메커니즘, 코딩 스타일을 명확히 확인하실 수 있도록 **최종 PPT 발표 자료**와 **버전별 시연 데모 영상**, 그리고 **핵심 아키텍처 코드 스니펫**을 본 README에 상세히 아카이빙해 두었습니다. 코드 및 설계 구조 중심으로 검토해 주시면 감사하겠습니다.
+대신, 프로젝트의 기획 배경, 상세 구동 메커니즘, 코딩 스타일을 명확히 확인하실 수 있도록 **최종 PPT 발표 자료**와 **다양한 연출의 버전별 데모 영상**, 그리고 **핵심 아키텍처 코드 스니펫**을 본 README에 상세히 아카이빙해 두었습니다. 코드 및 설계 구조 중심으로 검토해 주시면 감사하겠습니다.
 
 ---
 
-## 프로젝트 아카이브 자료 (Media & Assets)
+## 🎬 프로젝트 아카이브 자료 (Media & Assets)
 
 > 💡 **리뷰어 필수 참고:** 모든 링크는 권한 요청 없이 즉시 확인 가능하도록 공개되어 있습니다.
 
 *   **📊 [최종 프로젝트 발표 PPT (Google Drive)](구글드라이브_PPT_링크_넣기):** 기획 배경, 데이터베이스 모델링(USDA 및 Sydney GI 수동 매핑 알고리즘), 전체 서비스 아키텍처 및 기대 효과가 정리된 마일스톤 발표 자료입니다.
-*   **🎥 [최종 시연 데모 영상 (Google Drive)](구글드라이브_최종영상_링크_넣기):** 앱의 전체 핵심 시나리오(식품 스캔 ➡️ AI 분석 및 확정 ➡️ 영양 성분 매핑 및 챗봇 피드백)가 매끄럽게 구동되던 실제 서비스 시연 영상입니다.
-*   **⏳ [버전별 개발 히스토리 영상 (Google Drive)](구글드라이브_여러버전_폴더_링크_넣기):** 초기 프로토타입 빌드부터 최종 완성본에 이르기까지, UI/UX 개선 및 예외 처리 고도화를 거치며 릴리즈 단계를 밟아온 개발 프로세스 아카이브입니다.
+*   **🎥 [최종 통합 데모 영상 (Google Drive)](구글드라이브_최종영상_링크_넣기):** 앱의 전체 핵심 시나리오(식품 스캔 ➡️ AI 분석 및 확정 ➡️ 영양 성분 매핑 및 챗봇 피드백)가 끊김 없이 매끄럽게 구동되는 메인 시연 영상입니다.
+*   **🎞️ [버전별 데모 영상 모음 폴더 (Google Drive)](구글드라이브_여러버전_폴더_링크_넣기):** 주요 타겟층, 발표 연출 상황, 시연 시나리오별 동선에 맞춰 다양한 버전으로 독립 제작된 완성형 데모 영상 아카이브입니다.
+
+---
+
+## 👨‍💻 본인 역할 및 기여도 (My Role & Contributions)
+
+**"Figma UI/UX 디자인 가이드를 제외한 기획 및 설계, 풀스택 개발 전 과정 100% 전담"**
+
+*   **UI/UX 코드 변환 및 프론트엔드 구축:** 디자이너의 Figma 원안 가이드를 분석하여 React Native(Expo) 컴포넌트 코드로 100% 직접 이식 및 퍼블리싱을 완료했습니다.
+*   **핵심 비즈니스 로직 및 데이터 설계:** 음식 이미지 인식 스캔 API 연동, 중량(Portion) 정보 제어 알고리즘 구현, USDA 및 Sydney GI 영양소/혈당 지수 매핑 로직을 통틀어 직접 설계하고 구현했습니다.
+*   **백엔드 인프라 구축 및 배포:** Firebase 서버리스 아키텍처(Functions, Hosting) 환경을 직접 세팅하여 모바일 클라이언트와의 데이터 파이프라인을 연결하고 배포 프로세스를 총괄했습니다.
 
 ---
 
@@ -42,3 +51,97 @@ AI Food Scan · Alternative Menu Recommendation · Exercise Conversion Service �
     │   └── assets/          # 앱에 사용된 이미지 및 고해상도 벡터 그래픽 에셋
     ├── App.js               # 중앙 집중형 상태 라우팅 엔진 및 인터랙션 통제
     └── package.json (Client)# 모바일 앱 전용 라이브러리 명세 (expo-camera, svg 등)
+
+---
+
+## 기술적 도전 및 핵심 설계 특징|
+
+1. 외부 의존성을 제거한 '중앙 집중형 상태 라우팅 (State-based Routing)'
+본 프로젝트는 무거운 외부 네비게이션 라이브러리 오버헤드를 줄이고자, App.js 중심의 독자적인 상태 관리 시스템(useState)과 조건부 렌더링을 설계하여 화면을 제어합니다.
+
+라이브러리 의존성을 다운사이징하여 앱 초기 로딩 성능을 최적화하고 최종 빌드 패키지 용량을 줄였습니다.
+
+Animated.View와 페이드 인터랙션을 결합해 기기 간 이질감 없는 유기적인 화면 연동을 보장합니다.
+
+식품 스캔 데이터(scanData), 섭취량 데이터(portionData), 지식 데이터베이스 카테고리(libraryCategory) 등 핵심 상태를 최상위 레벨에서 양방향 콜백 인터페이스(onNavigate)로 통제하여 데이터 흐름을 안전하게 추적합니다.
+
+export default function App() {
+  const [currentScreen, setCurrentScreen] = useState('welcome');
+  const [scanData, setScanData] = useState(null);
+  const [portionData, setPortionData] = useState(null);
+  const [libraryCategory, setLibraryCategory] = useState(null);
+  
+  const fadeAnim = useRef(new Animated.Value(1)).current;
+
+  // 화면 전환 시 페이드인 애니메이션 제어
+  useEffect(() => {
+    fadeAnim.setValue(0);
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
+  }, [currentScreen]);
+
+  // 중앙 집중형 조건부 렌더링 시스템
+  const renderScreen = () => {
+    switch (currentScreen) {
+      case 'welcome':
+        return <WelcomeScreen onNext="{()"> setCurrentScreen('welcome2')} />;
+      case 'home':
+        return <HomeScreen onNavigate="{(screen,"> {
+          setCurrentScreen(screen);
+          if (data?.category) setLibraryCategory(data.category);
+        }} />;
+      case 'scan':
+        return <ScanScreen onNavigate="{setCurrentScreen}" onResult="{setScanData}"/>;
+      case 'portionConfirm':
+        return <PortionConfirmScreen foodData="{scanData}" onConfirm="{setPortionData}" onNavigate="{setCurrentScreen}"/>;
+      case 'result':
+        return <ResultScreen data="{portionData}" onNavigate="{setCurrentScreen}"/>;
+      case 'chatbot':
+        return <ChatbotScreen onNavigate="{setCurrentScreen}"/>;
+      default:
+        return <WelcomeScreen onNext="{()"> setCurrentScreen('welcome2')} />;
+    }
+  };
+
+  // 특정 화면 풀스크린 구동을 위한 하단 탭 바 분기 처리
+  const showTabBar = ['home', 'chatbot', 'library', 'scan', 'result'].includes(currentScreen);
+
+  return (
+    <SafeAreaView style="{styles.container}">
+      <Animated.View fadeAnim opacity: style="{[styles.screenContainer," { }]}>
+        {renderScreen()}
+      </Animated.View>
+      
+      {showTabBar && (
+        <View style="{styles.tabBar}">
+          <TouchableOpacity onPress="{()"> setCurrentScreen('home')}>
+            <Text && 'home' currentScreen="==" style="{[styles.tabLabel," styles.tabLabelActive]}>홈</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress="{()"> setCurrentScreen('scan')}>
+            <Text && 'scan' currentScreen="==" style="{[styles.tabLabel," styles.tabLabelActive]}>스캔</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress="{()"> setCurrentScreen('chatbot')}>
+            <Text && 'chatbot' currentScreen="==" style="{[styles.tabLabel," styles.tabLabelActive]}>챗봇</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+    </SafeAreaView>
+  );
+}
+
+---
+
+## 기술 스택 (Tech Stack)
+Client
+Framework: React Native (Expo)
+
+Libraries: expo-camera (하드웨어 제어), expo-splash-screen (초기 로딩 UX 최적화), react-native-svg & react-native-svg-transformer (고해상도 벡터 아이콘 컴포넌트화)
+
+Backend & Infrastructure (Archived)
+Language/Environment: Python, Node.js
+
+Database & Deployment: Firebase (Hosting & Functions)
+
