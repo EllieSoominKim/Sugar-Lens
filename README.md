@@ -10,8 +10,8 @@
 ##  프로젝트 아카이브 자료 (Media & Assets)
 
 >  **리뷰어 필수 참고:** 모든 링크는 권한 요청 없이 즉시 확인 가능하도록 공개되어 있습니다.
-
-*   ** [최종 프로젝트 발표 PPT (Google Drive)](구글드라이브_PPT_링크_넣기):** 기획 배경, 데이터베이스 모델링(식약처 및 Sydney GI 매핑 알고리즘), 전체 서비스 아키텍처 및 기대 효과가 정리된 마일스톤 발표 자료입니다.
+*   ** [최종 프로젝트 보고서 (Google Drive)](https://drive.google.com/file/d/1Fc2lg34fXKudpEWTWBl0c141WmFN0T4s/view?usp=sharing):** 프로젝트의 기획부터 설계, 구현, 테스트 및 회고까지 전 과정을 정리한 최종 보고서입니다.
+*   ** [최종 프로젝트 발표 PPT (Google Drive)](https://drive.google.com/file/d/1nEggBAf5BaZqR3Zc-jCAdT4oy4IKuPCh/view?usp=sharing):** 기획 배경, 데이터베이스 모델링(식약처 및 Sydney GI 매핑 알고리즘), 전체 서비스 아키텍처 및 기대 효과가 정리된 마일스톤 발표 자료입니다.
 *   ** [최종 통합 데모 영상 (Google Drive)](https://drive.google.com/file/d/1muKlDiArzqFHZNQYK1bvFVV9v1U-gc02/view?usp=sharing):** 앱의 전체 핵심 시나리오가 매끄럽게 구동되는 메인 시연 영상입니다.
 *   ** [버전별 데모 영상 모음 폴더 (Google Drive)](https://drive.google.com/drive/folders/11JFxR7ieHL3WIhiV7Q1sTYca-Rb1WLN7?usp=drive_link):** 발표 연출 상황, 시연 시나리오별 동선에 맞춰 다양한 버전으로 독립 제작된 완성형 데모 영상 아카이브입니다.
 
