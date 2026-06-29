@@ -173,7 +173,7 @@ export default function App() {
     *   `react-native-svg` & `react-native-svg-transformer` (고해상도 벡터 아이콘 컴포넌트화 및 렌더링)
 
 ###  Backend & Infrastructure
-*   **Language:** Python 3.12, JavaScript
+*   **Language:** Python 3.12, Firebase
 *   **Framework:** Firebase Cloud Functions
 *   **AI API:** Google Gemini Flash API
 *   **Database:** CSV (gi_mapping.csv - 100 items)
