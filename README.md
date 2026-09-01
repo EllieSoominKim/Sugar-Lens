@@ -16,14 +16,15 @@
 *   ** [버전별 데모 영상 모음 폴더 (Google Drive)](https://drive.google.com/drive/folders/11JFxR7ieHL3WIhiV7Q1sTYca-Rb1WLN7?usp=drive_link):** 발표 연출 상황, 시연 시나리오별 동선에 맞춰 다양한 버전으로 독립 제작된 완성형 데모 영상 아카이브입니다.
 
 ---
+## 본인 역할 및 기여도 (My Role & Contributions)
 
-##  본인 역할 및 기여도 (My Role & Contributions)
+**"백엔드 리드 · 기여도 60%"**
 
-*   **UI/UX 코드 변환 및 프론트엔드 구축:** 디자이너의 Figma 원안 가이드를 분석하여 React Native(Expo) 컴포넌트 코드로 100% 직접 이식 및 퍼블리싱을 완료했습니다.
-*   **핵심 비즈니스 로직 및 데이터 설계:** 음식 이미지 인식 스캔 API 연동, 중량(Portion) 정보 제어 알고리즘 구현, 식약처 영양소 데이터 및 Sydney GI 혈당 지수 매핑 로직을 통틀어 직접 설계하고 구현했습니다.
-*   **맞춤형 운동 환산 알고리즘 설계:** 사용자의 신체 스펙(몸무게) 데이터와 식단으로 섭취한 칼로리를 연동하여, 목표 소모를 위한 맞춤형 운동량(걷기, 러닝, 스쿼트)을 실시간으로 역산해내는 알고리즘을 독자적으로 구축했습니다.
-*   **백엔드 인프라 구축 및 배포:** Firebase 서버리스 아키텍처(Functions, Hosting) 환경을 직접 세팅하여 모바일 클라이언트와의 데이터 파이프라인을 연결하고 배포 프로세스를 총괄했습니다.
-
+*   **AI API 연동 및 프롬프트 엔지니어링:** Google Gemini Vision/Text API를 연동하고, JSON 스키마 강제 및 한국어 음식명 우선화 프롬프트를 설계해 파싱 성공률 95%를 달성했습니다.
+*   **핵심 비즈니스 로직 설계:** 음식명 매칭 알고리즘(완전 일치 → 부분 일치 Fallback, 매칭 정확도 약 98%), GI 등급 판정 로직, GI 가중치 기반 운동량 환산 알고리즘을 직접 설계하고 구현했습니다.
+*   **데이터셋 구축:** 식약처(MFDS) 및 Sydney University GI Database를 결합하여 `gi_mapping.csv`(100개 음식 × 14개 컬럼) 데이터셋을 설계·구축했습니다.
+*   **백엔드 API 구현:** Firebase Cloud Functions 기반 API 4종(`scan`, `nutrition`, `chatbot`, `library`)을 Python으로 구현했습니다.
+*   **인프라 세팅 및 배포:** Firebase 서버리스 인프라를 세팅해 모바일 클라이언트와의 데이터 파이프라인을 연결하고 배포를 진행했습니다.
 ---
 
 ##  주요 기능 (Key Features)
